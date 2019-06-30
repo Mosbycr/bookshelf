@@ -11,7 +11,8 @@ function App() {
       <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/books" component={Home} />
+          <Route exact path="/search" component={Home} />
+          <Route exact path="/books" component={Saved} />
           <Route exact path="/books/:id" component={Saved} />
           {/* <Route component={NoMatch} /> */}
         </Switch>

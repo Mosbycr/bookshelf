@@ -20,12 +20,12 @@ function Navbar() {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/books">
+              <a class="nav-link" href="/search">
                 Search <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/books/:id">
+              <a class="nav-link" href="/books">
                 Saved
               </a>
             </li>
@@ -36,3 +36,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// does Saved need to be /books/:id ?
