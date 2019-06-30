@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import {Container, Col, Row} from "../components/Grid";
+import {Input} from "../components/BookSearchForm";
 
 class Home extends Component {
     state = {
@@ -17,7 +18,13 @@ class Home extends Component {
             <Container>
               <Row>
                 <Col size="md-12">
-                  <div>Hello this is showing!!</div>
+                  <form>
+                      <Input 
+                      value={this.state.search}
+                      name="search"
+                      placeholder="Search book title here"
+                      />
+                  </form>
                 </Col>
               </Row>
             </Container>
