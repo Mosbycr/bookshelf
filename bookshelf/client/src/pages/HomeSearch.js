@@ -8,6 +8,13 @@ class Home extends Component {
         search: ""
     };
 
+    handleInput = event => {
+        const {name, value} = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
     render(){
         return (
           <div>
@@ -23,6 +30,7 @@ class Home extends Component {
                       value={this.state.search}
                       name="search"
                       placeholder="Search book title here"
+                      onChange={this.handleInput}
                       />
                   </form>
                 </Col>
