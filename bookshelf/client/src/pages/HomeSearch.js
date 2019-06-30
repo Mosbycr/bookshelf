@@ -5,9 +5,10 @@ class Home extends Component {
 
     render(){
         return (
-          <div>
-            <Jumbotron />
-          </div>
+            <Jumbotron>
+                <h1>BookShelf</h1>
+                <h3>Find a book to add to your library</h3>
+            </Jumbotron>
         );
     }
 }

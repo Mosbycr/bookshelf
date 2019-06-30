@@ -1,12 +1,13 @@
 import React from "react";
 import { Container } from "../Grid";
 
-function Jumbotron(){
+function Jumbotron({children}){
     return(
         <div className="jumbotron">
             <Container fluid>
-                <h1>BookShelf</h1>
-                <h3>Find a book to add to your library</h3>
+                {children}
+                {/* <h1>BookShelf</h1>
+                <h3>Find a book to add to your library</h3> */}
             </Container>
         </div>
     )
