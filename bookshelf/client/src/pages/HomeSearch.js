@@ -1,15 +1,27 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Jumbotron from "../components/Jumbotron";
 import {Container, Col, Row} from "../components/Grid";
 import {Input} from "../components/BookSearchForm";
 import {Card} from "../components/Card";
+import API from "../utils/API";
 
 class Home extends Component {
     state = {
         search: "",
-        results: []
+        results: {}
     };
+
+    componentDidMount() {
+      this.searchBooks("Harry Potter");
+      console.log(this.state.results);
+    }
+
+    searchBooks = query => {
+      API.search(query)
+        .then(res => this.setState({ results: res.data }))
+        .catch(err => console.log(err));  
+    }
 
     handleInput = event => {
         const {name, value} = event.target;
@@ -40,18 +52,18 @@ class Home extends Component {
               </Row>
               <Row>
                   <Col size="md-12">
-                    {this.state.results.map(book => (
+                    {/* {this.state.results.map(book => ( */}
                         <Card>
-                            <Link to={"/search"}>
+                            {/* <Link to={"/search"}> */}
                                 <img src="" className="card-img-top" alt="" />
                                 <div className="card-body">
                                     <h5 className="card-title"></h5>
                                     <p className="card-text"></p>
                                     <a href="#" className="btn">Save Book</a>
                                 </div>
-                            </Link>
+                            {/* </Link> */}
                         </Card>
-                    ))}
+                    {/* ))} */}
                   </Col>
               </Row>
             </Container>
