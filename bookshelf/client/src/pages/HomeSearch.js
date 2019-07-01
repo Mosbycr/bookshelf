@@ -5,7 +5,8 @@ import {Input} from "../components/BookSearchForm";
 
 class Home extends Component {
     state = {
-        search: ""
+        search: "",
+        results: []
     };
 
     handleInput = event => {
@@ -34,6 +35,11 @@ class Home extends Component {
                       />
                   </form>
                 </Col>
+              </Row>
+              <Row>
+                  <Col size="md-12">
+                    
+                  </Col>
               </Row>
             </Container>
           </div>
