@@ -72,9 +72,10 @@ class Home extends Component {
               </Row>
               <Row>
                 <Col size="md-12">
-                  {(this.state.bookResults.length > 0)?
-                    <ResultsContainer bookResults={this.state.bookResults}/> : null
-                  }
+                  {/* {(this.state.bookResults.length > 0)? */}
+                    <ResultsContainer bookResults={this.state.bookResults}/> 
+                    {/* : null */}
+                  {/* } */}
                 </Col>
               </Row>
             </Container>

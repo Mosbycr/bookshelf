@@ -1,10 +1,15 @@
 import React from "react";
-import { Card } from "../components/Card";
+import {Card} from "../Card";
 
 function ResultsContainer(props) {
+
+  console.log(props.bookResults);
   return (
     <div id="resultsContainer">
-      {props.bookResults.map(book => {
+
+      {
+        props.bookResults.items &&
+        props.bookResults.items.map(book => {
         const bookInfo = book.volumeInfo;
         return (
           <Card
@@ -14,7 +19,7 @@ function ResultsContainer(props) {
             link={bookInfo.infoLink}
             img={bookInfo.imageLinks.smallThumbnail}
             // path={props.path}
-            key={book.id}
+            key={book.title}
           />
         );
       })}
