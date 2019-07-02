@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Jumbotron from "../components/Jumbotron";
 import {Container, Col, Row} from "../components/Grid";
 import {Input, FormBtn} from "../components/BookSearchForm";
-// import {Card} from "../components/Card";
+import {Card} from "../components/Card";
 import API from "../utils/API";
 import {List, ListItem} from "../components/BooksList";
 
@@ -38,7 +38,7 @@ class Home extends Component {
 
     handlebookSearchSubmit = event => {
       event.preventDefault();
-      
+      this.searchBooks(this.state.bookSearch);
     }
 
     render(){
@@ -71,13 +71,18 @@ class Home extends Component {
               </Row>
               <Row>
                 <Col size="md-12">
-                  <List>
+                    <Card>
                     {/* {this.state.results.map(book => ( */}
-                    <ListItem>
-                      {/* <h1>{this.state.results[0].volumeInfo.title}</h1> */}
-                    </ListItem>
+                    {/* <Link to={"/search"}> */}
+                    <img src="" className="card-img-top" alt="" />
+                                <div className="card-body">
+                                    <h5 className="card-title"></h5>
+                                    <p className="card-text"></p>
+                                    <a href="#" className="btn btn-primary">Save Book</a>
+                                </div>
+                    {/* </Link> */}
                     {/* ))} */}
-                  </List>
+                    </Card>
                 </Col>
               </Row>
             </Container>
@@ -88,13 +93,4 @@ class Home extends Component {
 
 export default Home;
 
- {/* <Card> */}
-                            {/* <Link to={"/search"}> */}
-                                {/* <img src="" className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"></h5>
-                                    <p className="card-text"></p>
-                                    <a href="#" className="btn">Save Book</a>
-                                </div> */}
-                            {/* </Link> */}
-                        {/* </Card> */}
+ 
