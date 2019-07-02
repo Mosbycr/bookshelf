@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Jumbotron from "../components/Jumbotron";
 import {Container, Col, Row} from "../components/Grid";
 import {Input, FormBtn} from "../components/BookSearchForm";
-import {Card} from "../components/Card";
+import ResultsContainer from "../components/BookResults";
+
 import API from "../utils/API";
-import {List, ListItem} from "../components/BooksList";
+// import {List, ListItem} from "../components/BooksList";
 
 class Home extends Component {
   constructor(props){
@@ -71,18 +72,9 @@ class Home extends Component {
               </Row>
               <Row>
                 <Col size="md-12">
-                    <Card>
-                    {/* {this.state.results.map(book => ( */}
-                    {/* <Link to={"/search"}> */}
-                    <img src="" className="card-img-top" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title"></h5>
-                                    <p className="card-text"></p>
-                                    <a href="#" className="btn btn-primary">Save Book</a>
-                                </div>
-                    {/* </Link> */}
-                    {/* ))} */}
-                    </Card>
+                  {(this.state.bookResults.length > 0)?
+                    <ResultsContainer bookResults={this.state.bookResults}/> : null
+                  }
                 </Col>
               </Row>
             </Container>
