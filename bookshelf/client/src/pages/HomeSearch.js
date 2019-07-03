@@ -39,7 +39,8 @@ class Home extends Component {
 
     handlebookSearchSubmit = event => {
       event.preventDefault();
-      this.searchBooks(this.state.bookSearch);
+      // this.searchBooks(this.state.bookSearch);
+      alert("This works!");
     }
 
     render(){
