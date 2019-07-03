@@ -39,8 +39,8 @@ class Home extends Component {
 
     handlebookSearchSubmit = event => {
       event.preventDefault();
-      // this.searchBooks(this.state.bookSearch);
-      alert("This works!");
+      this.searchBooks(this.state.bookSearch);
+      // alert("This works!");
     }
 
     render(){
@@ -55,8 +55,8 @@ class Home extends Component {
                 <Col size="md-12">
                   <form>
                     <Input
-                      value={this.state.search}
-                      name="search"
+                      value={this.state.bookSearch}
+                      name="bookSearch"
                       placeholder="Search book title here"
                       onChange={this.handleInput}
                     />
