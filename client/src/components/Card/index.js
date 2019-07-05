@@ -19,7 +19,7 @@ class Card extends Component {
           <h3 className="card-title">Title: {this.props.title}</h3>
           <h2 className="card-author">Author(s): {this.props.authors}</h2>
           <p className="card-text">Synopsis: {this.props.description}</p>
-          <a href={this.props.link} className="btn btn-primary">
+          <a href={this.props.link} target="_blank" className="btn btn-primary">
             Buy Book
           </a>
           {
