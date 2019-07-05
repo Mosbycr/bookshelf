@@ -6,9 +6,15 @@ class Card extends Component {
   constructor(props){
     super(props);
     this.state = {
-      savedbooks: [],
+      saved: false,
     };
 
+    this.handleSavedBook = this.handleSavedBook.bind(this);
+  }
+
+  handleSavedBook = event => {
+    event.preventDefault();
+    alert("this is clickable!!")
   }
 
   render(){
@@ -24,7 +30,7 @@ class Card extends Component {
           </a>
           {
             (this.props.path === "/" || this.props.path === "/search")? 
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" onClick = {this.handleSavedBook}>
             Save Book
           </button> : null
           }
