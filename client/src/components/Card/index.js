@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-// import API from "../utils/API";
+import API from "../../utils/API";
 
 
 class Card extends Component {
@@ -14,7 +14,22 @@ class Card extends Component {
 
   handleSavedBook = event => {
     event.preventDefault();
-    alert("this is clickable!!")
+    this.setState({ saved: true });
+    const bookData = {
+      title: this.props.title,
+      authors: this.props.authors,
+      link: this.props.link,
+      img: this.props.img,
+      description: this.props.description
+    };
+
+    API.saveBook(bookData)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   render(){
