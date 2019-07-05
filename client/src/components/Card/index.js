@@ -22,13 +22,12 @@ class Card extends Component {
           <a href={this.props.link} className="btn btn-primary">
             Buy Book
           </a>
-          <button className="btn btn-primary">Save Book</button>
-          {/* {
+          {
             (this.props.path === "/" || this.props.path === "/search")? 
           <button className="btn btn-primary">
             Save Book
           </button> : null
-          } */}
+          }
         </div>
       </div>
     );
