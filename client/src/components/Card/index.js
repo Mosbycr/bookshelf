@@ -11,9 +11,12 @@ export function Card(props){
           <a href={props.link} className="btn btn-primary">
             Buy Book
           </a>
-          <a href="/books" className="btn btn-primary">
+          {
+            (this.props.path === "/" || this.props.path === "/search")? 
+          <button className="btn btn-primary">
             Save Book
-          </a>
+          </button> : null
+          }
         </div>
       </div>
     );

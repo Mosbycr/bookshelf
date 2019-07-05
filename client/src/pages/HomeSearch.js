@@ -40,6 +40,11 @@ class Home extends Component {
       this.searchBooks(this.state.bookSearch);
     }
 
+    handlebookSave = event => {
+      event.preventDefault();
+      alert("this is clickable");
+    }
+
     render(){
         return (
           <div>
