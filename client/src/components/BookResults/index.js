@@ -26,7 +26,7 @@ function ResultsContainer(props) {
   } else if (props.path === "/books"){
     return (
       <div id="resultsContainer">
-        {props.bookResults.items &&
+        {
           props.bookResults.items.map(book => {
             const bookInfo = book.volumeInfo;
             return (
