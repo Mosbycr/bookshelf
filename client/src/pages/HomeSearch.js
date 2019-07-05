@@ -4,7 +4,6 @@ import Jumbotron from "../components/Jumbotron";
 import {Container, Col, Row} from "../components/Grid";
 import {Input, FormBtn} from "../components/BookSearchForm";
 import ResultsContainer from "../components/BookResults";
-
 import API from "../utils/API";
 // import {List, ListItem} from "../components/BooksList";
 
@@ -21,7 +20,6 @@ class Home extends Component {
 
     componentDidMount() {
       this.searchBooks("Harry Potter");
-      // console.log(process.env.REACT_APP_SECRET);
     }
 
     searchBooks = query => {
@@ -40,7 +38,6 @@ class Home extends Component {
     handlebookSearchSubmit = event => {
       event.preventDefault();
       this.searchBooks(this.state.bookSearch);
-      // alert("This works!");
     }
 
     render(){
@@ -61,9 +58,7 @@ class Home extends Component {
                       onChange={this.handleInput}
                     />
                     <FormBtn
-                      // disabled={
-                      //   !(this.state.author && this.state.title)
-                      // }
+                      disabled={!this.state.bookSearch}
                       onClick={this.handlebookSearchSubmit}
                     >
                       Submit Book
@@ -73,10 +68,10 @@ class Home extends Component {
               </Row>
               <Row>
                 <Col size="md-12">
-                  {/* {(this.state.bookResults.length > 0)? */}
-                    <ResultsContainer bookResults={this.state.bookResults}/> 
-                    {/* : null */}
-                  {/* } */}
+                  <ResultsContainer
+                    bookResults={this.state.bookResults}
+                    path={this.props.match.path}
+                  />
                 </Col>
               </Row>
             </Container>

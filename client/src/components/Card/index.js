@@ -11,7 +11,7 @@ export function Card(props){
           <a href={props.link} className="btn btn-primary">
             Buy Book
           </a>
-          <a href="#" className="btn btn-primary">
+          <a href="/books" className="btn btn-primary">
             Save Book
           </a>
         </div>
