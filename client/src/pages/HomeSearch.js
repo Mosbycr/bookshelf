@@ -20,13 +20,13 @@ class Home extends Component {
     // this.handleSavedBook = this.handleSavedBook.bind(this);
   }
 
-  componentDidMount() {
-    this.searchBooks("Harry Potter");
-  }
+  // componentDidMount() {
+  //   this.searchBooks();
+  // }
 
   searchBooks = query => {
     API.search(query)
-      .then(res => this.setState({ bookResults: res.data }))
+      .then(res => this.setState({ bookResults: res.data, bookSearch: "" }))
       .catch(err => console.log(err));
   };
 

@@ -50,7 +50,7 @@ class Card extends Component {
             className="btn"
             id="buyBtn"
           >
-            Buy Book
+            See More...
           </a>
           {this.props.path === "/" || this.props.path === "/search" ? (
             <button
