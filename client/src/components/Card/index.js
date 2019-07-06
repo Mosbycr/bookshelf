@@ -50,7 +50,7 @@ class Card extends Component {
           </a>
           {this.props.path === "/" || this.props.path === "/search" ? (
             <button
-              className="btn btn-primary"
+              className="btn"
               id={this.props.id}
               // onClick={(event) => this.props.handleSavedButton(event)}
             >

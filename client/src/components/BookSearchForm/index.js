@@ -1,4 +1,5 @@
 import React from "react";
+// import "./bookForm.css";
 
 export function Input(props){
     return (
@@ -10,7 +11,7 @@ export function Input(props){
 
 export function FormBtn(props) {
   return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+    <button {...props} className="btn text-white">
       {props.children}
     </button>
   );

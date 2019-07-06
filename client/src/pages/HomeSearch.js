@@ -6,6 +6,7 @@ import {Input, FormBtn} from "../components/BookSearchForm";
 import ResultsContainer from "../components/BookResults";
 import API from "../utils/API";
 // import {List, ListItem} from "../components/BooksList";
+import "../App.css";
 
 class Home extends Component {
   constructor(props) {
