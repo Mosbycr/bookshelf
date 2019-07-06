@@ -20,7 +20,7 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item active">
+            <li className="nav-item">
               <a className="nav-link" href="/search">
                 Search <span className="sr-only">(current)</span>
               </a>

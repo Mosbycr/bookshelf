@@ -19,31 +19,33 @@ function ResultsContainer(props) {
                 img={bookInfo.imageLinks.smallThumbnail}
                 path={props.path}
                 key={bookInfo.id}
+                id={bookInfo.id}
               />
             );
           })}
       </div>
     );
-  } else if (props.path === "/books"){
-    return (
-      <div id="resultsContainer">
-        {
-          props.bookResults.items.map(book => {
-            const bookInfo = book.volumeInfo;
-            return (
-              <Card
-                title={bookInfo.title}
-                authors={bookInfo.authors}
-                description={bookInfo.description}
-                link={bookInfo.infoLink}
-                img={bookInfo.imageLinks.smallThumbnail}
-                path={props.path}
-                key={bookInfo._id}
-              />
-            );
-          })}
-      </div>
-    );
+  // } else if (props.path === "/books"){
+    //once get data to save will filter through and set correctly
+    // return (
+    //   <div id="resultsContainer">
+    //     {
+    //       props.bookResults.items.map(book => {
+    //         const bookInfo = book.volumeInfo;
+    //         return (
+    //           <Card
+    //             title={bookInfo.title}
+    //             authors={bookInfo.authors}
+    //             description={bookInfo.description}
+    //             link={bookInfo.infoLink}
+    //             img={bookInfo.imageLinks.smallThumbnail}
+    //             path={props.path}
+    //             key={bookInfo._id}
+    //           />
+    //         );
+    //       })}
+    //   </div>
+    // );
   }
 }
 
