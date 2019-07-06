@@ -82,6 +82,8 @@ class Home extends Component {
               </form>
             </Col>
           </Row>
+        </Container>
+        <Container fluid>
           <Row>
             <Col size="md-12">
               <ResultsContainer

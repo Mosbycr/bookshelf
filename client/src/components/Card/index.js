@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import API from "../../utils/API";
+import "./index.css";
 
 
 class Card extends Component {
@@ -35,16 +36,19 @@ class Card extends Component {
   render() {
     return (
       <div className="card" id={this.props.id ? this.props.id : null}>
-        <img src={this.props.img} className="card-img-top" alt="" />
         <div className="card-body">
-          <h3 className="card-title">Title: {this.props.title}</h3>
+          <h3 className="card-title">{this.props.title}</h3>
+        <div className="img-container">
+          <img src={this.props.img} className="card-img-top" alt="" />
+        </div>
           <h2 className="card-author">Author(s): {this.props.authors}</h2>
           <p className="card-text">Synopsis: {this.props.description}</p>
           <a
             href={this.props.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn" id="buyBtn"
+            className="btn"
+            id="buyBtn"
           >
             Buy Book
           </a>
