@@ -44,7 +44,7 @@ class Card extends Component {
             href={this.props.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn" id="buyBtn"
           >
             Buy Book
           </a>
